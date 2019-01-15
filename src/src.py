@@ -64,7 +64,7 @@ def contact(intent, session):
     speech_output = ""
     should_end_session = True
 
-    card_output = "PHONE: (757) 422-8979 EMAIL: info@vgnet.com"
+    card_output = "WEBSITE: VistaGraphicsInc.com | PHONE: (757) 422-8979 | EMAIL: info@vgnet.com"
     speech_output = "<speak>Vista Graphics Inc is located at 1-2-6-4 Perimeter Parkway, in Virginia Beach, VA. <break time=\"0.5s\"/> For information about our Publishing Services, Advertising Opportunities, Digital Services, Event Services, or for general inquiries, you can reach Vista Graphics by phone at. <break time=\"0.25s\"/> 7-5-7. 4-2-2. 8-9-7-9. You can also check out their website at Vista Graphics inc dot com.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
@@ -135,7 +135,7 @@ def events_ticketing_services(intent, session):
     speech_output = ""
     should_end_session = True
     
-    card_output = "We manage and promote dozens of events each year and also offer our clients a method for selling tickets and promoting events."
+    card_output = "Check our CoVaTIX.com and HillCityTIX.com! We manage and promote dozens of events each year and also offer our clients a method for selling tickets and promoting events."
     speech_output = "<speak>Through our Events and Ticketing Services <break time=\"0.25s\"/> " + services_list[3] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response

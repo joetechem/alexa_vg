@@ -172,7 +172,7 @@ def stop(intent, session):
     should_end_session = True
     
     card_output = "Have a nice day!"
-    speech_output = "<speak>Thank you for asking about Vista Graphics Inc. <break time=\"0.25s\"/> <say-as interpret-as="arrivederci">!</say-as>.!</speak>"
+    speech_output = "<speak>Thank you for asking about Vista Graphics Inc. <break time=\"0.25s\"/> <say-as interpret-as='arrivederci'>!</say-as>.!</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Session Ended", card_output, speech_output, reprompt_text, should_end_session))
@@ -220,7 +220,7 @@ def on_launch(launch_request, session):
     
     # Dispatch to skill's launch
     return build_response({},build_speechlet_response(
-        "Vista Graphics, Inc.", "Welcome to the Amazon Alexa skill, Vista Graphics!", "<speak> <say-as interpret-as='interjection'>open sesame</say-as> <say-as interpret-as='interjection'>howdy</say-as> Welcome to the Amazon Alexa skill, Vista Graphics. I will give the 4-1-1 on Vista Graphics Inc. To learn more, just drop me a line by asking me About, Contact, or say. Alexa, ask Vista Graphics for help.</speak>","",False))
+        "Vista Graphics, Inc.", "Welcome to the Amazon Alexa skill, Vista Graphics!", "<speak> <say-as interpret-as='interjection'>open sesame</say-as>. Welcome to the Vista Graphics, Inc Alexa Skill. I will give the 4-1-1 on Vista Graphics Inc. To learn more, just drop me a line by asking me About, Contact, or say. Alexa, ask Vista Graphics for help.</speak>","",False))
 
 
 def on_intent(intent_request, session):

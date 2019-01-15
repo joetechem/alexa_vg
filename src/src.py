@@ -144,7 +144,7 @@ def events_ticketing_services(intent, session):
 
 # List of example testimonials to return when testimonials() is called
 testimonials_list = [
-    "The app has been a game changer for the Zoo. We have been able to achieve a big green initiative by eliminating paper maps completely. Plus, we have expanded our conservation and educational messaging to people of all ages through the technology. Says Greg Bockheim, Virginia Zoo's Executive Director. See what all the Wallabies are talking about. Download the Virginia Zoo app for free, on the Apple Store, or Google Playstore.",
+    "<voice name='Matthew'> The app has been a <prosody rate='x-slow'> game changer </prosody> for the Zoo. <break time=\"0.25s\"/> We have been able to achieve a big green initiative by eliminating paper maps completely. Plus, we have expanded our conservation and educational messaging to people of all ages, through the technology. </voice> <break time=\"1s\"/> That was a nice testimonial from Greg Bockheim, Virginia Zoo's Executive Director. Thanks Greg. See what all the Wallabies are talking about. Download the Virginia Zoo app for free, on the Apple Store, or Google Playstore.",
     "We just wanted to thank you again for having our winery there this year.  You did a fabulous job!!! Everyone was so helpful and professional. Says Pamela Cowdrey, from Castle Glen Estates Farm and Winery.",
     "The bridal show was absolutely wonderful! I always take approximately 400-500 samples to a bridal show and I ran out!!! Says Alice Cooke, from Creations From the Heart.",
     "The Visitor's Guide has been instrumental in success through targeted and broad marketing, to ensure our brand and products reach our potential customers. Says David Williams, from Donutz On A Stick.",

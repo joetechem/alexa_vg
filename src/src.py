@@ -87,7 +87,7 @@ services_list = [
     'We now account for over 40 titles annually in the hospitality, lifestyle and specialized genres. With each publication, quality is the focus. We believe that the quality of the magazine affects the quality and receptiveness of the message. Print creates an emotional connection and builds relationships. A 2017 Marketing Sherpa study found that of all media, US internet users trust print ads the most.',
     'With an ever growing need for dedicated Internet service solutions, Vista Internet Marketing Solutions, Inc. was born to answer that call. As a division of VistaGraphics, Inc. your company will receive the same top quality care and service from our team of highly skilled professionals that our clients have enjoyed for over 30 years. We have built a solid team of designers, developers, SEO and marketing specialists.',
     'Are you looking for creative ways to market and brand your company or business? VistaGraphics has launched a new division for promotional products called VistaPromos. We provide a full spectrum of promotional products which enhance your competitive presence, brand image and exposure to your target audience. Every business should incorporate promotional products into their ad campaigns.',
-    'We manage and promote dozens of events each year. Through sponsorships, these events now provide an additional platform for our clients to grow and extend their brand. We also offer clients a method for selling tickets and promoting their events, via our online ticket portals for CoVaTIX and HillCityTix. These platforms are competitively priced, user friendly and customizable to fit the needs of each event.'
+    'We manage and promote dozens of events each year. Through sponsorships, these events now provide an additional platform for our clients to grow and extend their brand. We also offer clients a method for selling tickets and promoting their events, via our online ticket portals through <break time=\"0.25s\"/> Cova Ticks <break time=\"0.25s\"/> and Hill-City Ticks. These platforms are competitively priced, user friendly and customizable to fit the needs of each event.'
 ]
 
 def publishing_services(intent, session):
@@ -97,7 +97,7 @@ def publishing_services(intent, session):
     should_end_session = True
     
     card_output = "VistaGraphics publishes over 40 titles annually in the hospitality, lifestyle and specialized genres. With each publication, quality is the focus."
-    speech_output = "<speak>A little about our publishing services <break time=\"0.25s\"/> " + services_list[0] + " </speak>"
+    speech_output = "<speak>A little about our publishing services <break time=\"0.25s\"/>. " + services_list[0] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Publishing Services", card_output, speech_output, reprompt_text, should_end_session))
@@ -110,7 +110,7 @@ def digital_marketing(intent, session):
     should_end_session = True
     
     card_output = "With an ever growing need for dedicated Internet service solutions, Vista Internet Marketing Solutions, Inc. was born to answer that call."
-    speech_output = "<speak>A little about our digital marketing <break time=\"0.25s\"/> " + services_list[1] + " </speak>"
+    speech_output = "<speak>A little about our digital marketing <break time=\"0.25s\"/>. " + services_list[1] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Digital Marketing", card_output, speech_output, reprompt_text, should_end_session))
@@ -123,7 +123,7 @@ def vista_promos_div(intent, session):
     should_end_session = True
     
     card_output = "VistaGraphics has launched a new division for promotional products called VistaPromos to help market and brand your company."
-    speech_output = "<speak>A little about our Vista Promos Division <break time=\"0.25s\"/> " + services_list[2] + " </speak>"
+    speech_output = "<speak>A little about our Vista Promos Division <break time=\"0.25s\"/>. " + services_list[2] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Vista Promos Division", card_output, speech_output, reprompt_text, should_end_session))
@@ -136,7 +136,7 @@ def events_ticketing_services(intent, session):
     should_end_session = True
     
     card_output = "We manage and promote dozens of events each year and also offer our clients a method for selling tickets and promoting events."
-    speech_output = "<speak>A little about our Events and Ticketing Services <break time=\"0.25s\"/> " + services_list[3] + " </speak>"
+    speech_output = "<speak>Through our Events and Ticketing Services <break time=\"0.25s\"/> " + services_list[3] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Events & Ticketing Services", card_output, speech_output, reprompt_text, should_end_session))
@@ -244,9 +244,9 @@ def on_intent(intent_request, session):
         return publishing_services(intent, session)
     elif intent_name == "ServiceDigital":
         return digital_marketing(intent, session)
-    elif intent_name == "ServicesPromos":
+    elif intent_name == "ServicePromos":
         return vista_promos_div(intent, session)
-    elif intent_name == "ServicesEventsTickets":
+    elif intent_name == "ServiceEventsTickets":
         return events_ticketing_services(intent, session)
     elif intent_name == "Testimonials":
         return testimonials(intent, session)

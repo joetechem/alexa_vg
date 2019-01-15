@@ -144,7 +144,7 @@ def events_ticketing_services(intent, session):
 
 # List of example testimonials to return when testimonials() is called
 testimonials_list = [
-    "The app has been a game changer for the Zoo. We have been able to achieve a big green initiative by eliminating paper maps completely. Plus, we have expanded our conservation and educational messaging to people of all ages through the technology. Says Greg Bockheim, Virginia Zoo's Executive Director.",
+    "The app has been a game changer for the Zoo. We have been able to achieve a big green initiative by eliminating paper maps completely. Plus, we have expanded our conservation and educational messaging to people of all ages through the technology. Says Greg Bockheim, Virginia Zoo's Executive Director. See what all the Wallabies are talking about. Download the Virginia Zoo app for free, on the Apple Store, or Google Playstore.",
     "We just wanted to thank you again for having our winery there this year.  You did a fabulous job!!! Everyone was so helpful and professional. Says Pamela Cowdrey, from Castle Glen Estates Farm and Winery.",
     "The bridal show was absolutely wonderful! I always take approximately 400-500 samples to a bridal show and I ran out!!! Says Alice Cooke, from Creations From the Heart.",
     "The Visitor's Guide has been instrumental in success through targeted and broad marketing, to ensure our brand and products reach our potential customers. Says David Williams, from Donutz On A Stick.",
@@ -159,7 +159,7 @@ def testimonials(intent, session):
     should_end_session = True
     
     card_output = "Sweet Words From Our Clients"
-    speech_output = "<speak>Here is what someone said about Vista Graphics " + random.choice(testimonials_list) + " </speak>"
+    speech_output = "<speak>Here is what someone said about Vista Graphics. <break time=\"0.75s\"/> <say-as interpret-as='interjection'>ahem!</say-as> <break time=\"0.50s\"/> " + random.choice(testimonials_list) + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Testimonials", card_output, speech_output, reprompt_text, should_end_session))
@@ -172,7 +172,7 @@ def stop(intent, session):
     should_end_session = True
     
     card_output = "Have a nice day!"
-    speech_output = "<speak>Thank you for asking about Vista Graphics Inc. Have a nice day!</speak>"
+    speech_output = "<speak>Thank you for asking about Vista Graphics Inc. <break time=\"0.25s\"/> <say-as interpret-as="arrivederci">!</say-as>.!</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Session Ended", card_output, speech_output, reprompt_text, should_end_session))
@@ -220,7 +220,7 @@ def on_launch(launch_request, session):
     
     # Dispatch to skill's launch
     return build_response({},build_speechlet_response(
-        "Vista Graphics, Inc.", "Welcome to the Amazon Alexa skill, Vista Graphics!", "<speak>Welcome to the Amazon Alexa skill, Vista Graphics. I will give the 4-1-1 on Vista Graphics Inc. To learn more, just drop me a line by asking me About, Contact, or say. Alexa, ask Vista Graphics for help.</speak>","",False))
+        "Vista Graphics, Inc.", "Welcome to the Amazon Alexa skill, Vista Graphics!", "<speak> <say-as interpret-as='interjection'>open sesame</say-as> <say-as interpret-as='interjection'>howdy</say-as> Welcome to the Amazon Alexa skill, Vista Graphics. I will give the 4-1-1 on Vista Graphics Inc. To learn more, just drop me a line by asking me About, Contact, or say. Alexa, ask Vista Graphics for help.</speak>","",False))
 
 
 def on_intent(intent_request, session):

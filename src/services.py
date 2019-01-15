@@ -1,0 +1,18 @@
+#services = {
+#    'publishing services': 'We now account for over 40 titles annually in the hospitality, lifestyle and specialized genres. With each publication, quality is the focus. We believe that the quality of the magazine affects the quality and receptiveness of the message. Print creates an emotional connection and builds relationships. A 2017 Marketing Sherpa study found that of all media, US internet users trust print ads the most.',
+#    'digital marketing': 'With an ever growing need for dedicated Internet service solutions, Vista Internet Marketing Solutions, Inc. was born to answer that call. As a division of VistaGraphics, Inc. your company will receive the same top quality care and service from our team of highly skilled professionals that our clients have enjoyed for over 30 years. We have built a solid team of designers, developers, SEO and marketing specialists.',
+#    'vista promos division': 'Are you looking for creative ways to market and brand your company or business? VistaGraphics has launched a new division for promotional products called VistaPromos. We provide a full spectrum of promotional products which enhance your competitive presence, brand image and exposure to your target audience. Every business should incorporate promotional products into their ad campaigns.',
+#    'events and ticketing services': 'We manage and promote dozens of events each year. Through sponsorships, these events now provide an additional platform for our clients to grow and extend their brand. We also offer clients a method for selling tickets and promoting their events, via our online ticket portals for CoVaTIX and HillCityTix. These platforms are competitively priced, user friendly and customizable to fit the needs of each event.'
+#}
+
+#publishing services --> services[0]
+#digital marketing --> services[1]
+#vista promos division --> services[2]
+#events and ticketing services --> services[3]
+
+services = [
+    'We now account for over 40 titles annually in the hospitality, lifestyle and specialized genres. With each publication, quality is the focus. We believe that the quality of the magazine affects the quality and receptiveness of the message. Print creates an emotional connection and builds relationships. A 2017 Marketing Sherpa study found that of all media, US internet users trust print ads the most.',
+    'With an ever growing need for dedicated Internet service solutions, Vista Internet Marketing Solutions, Inc. was born to answer that call. As a division of VistaGraphics, Inc. your company will receive the same top quality care and service from our team of highly skilled professionals that our clients have enjoyed for over 30 years. We have built a solid team of designers, developers, SEO and marketing specialists.',
+    'Are you looking for creative ways to market and brand your company or business? VistaGraphics has launched a new division for promotional products called VistaPromos. We provide a full spectrum of promotional products which enhance your competitive presence, brand image and exposure to your target audience. Every business should incorporate promotional products into their ad campaigns.',
+    'We manage and promote dozens of events each year. Through sponsorships, these events now provide an additional platform for our clients to grow and extend their brand. We also offer clients a method for selling tickets and promoting their events, via our online ticket portals for CoVaTIX and HillCityTix. These platforms are competitively priced, user friendly and customizable to fit the needs of each event.'
+]

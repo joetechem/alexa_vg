@@ -53,7 +53,7 @@ def about(intent, session):
     should_end_session = True
 
     card_output = "In addition to the more than 35 publications that VistaGraphics publishes regularly, we also offer our clients custom publishing services."
-    speech_output = "<speak>We excel at making connections. Vista Graphics is a leader in quality publications, targeted digital marketing and event management services. In addition to the more than 35 publications that VistaGraphics publishes regularly, they also offer our clients custom publishing services. Whether it’s for a Destination Marketing Organization, a nonprofit organization or a national corporation, VistaGraphics, Inc. provides agency-quality design and production to meet your specific needs. No job is too large, or too small.</speak>"
+    speech_output = "<speak>We excel at making connections. Vista Graphics is a leader in quality publications, targeted digital marketing and event management services. In addition to the more than 35 publications that VistaGraphics publishes regularly, they also offer our clients custom publishing services. Whether it’s for a Destination Marketing Organization, a nonprofit organization, or a national corporation, VistaGraphics, Inc. provides agency-quality design and production to meet your specific needs. No job is too large Nor too small.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("About", card_output, speech_output, reprompt_text, should_end_session))

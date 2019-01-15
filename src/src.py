@@ -77,7 +77,7 @@ def services(intent, session):
     should_end_session = True
 
     card_output = "Services offered by VistaGraphics: Publishing, Digital Marketing, Vista Promos Division, Events & Ticketing."
-    speech_output = "<speak>Vista Graphics offers an array of services to help your business or event. Ask me about a service and I will tell you more. For example, you can ask me, Publishing. Digital Marketing. Promotions. Or Events and Ticketing Services.</speak>"
+    speech_output = "<speak>Vista Graphics offers an array of services to help your business or event. Ask me about a service and I'll happily tell you a little more about that offering. For example, you can say <break time=\"0.25s\"/> Publishing. Digital Marketing. Promotions. Events <break time=\"0.25s\"/> or Ticketing.</speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Services", card_output, speech_output, reprompt_text, should_end_session))
@@ -97,7 +97,7 @@ def publishing_services(intent, session):
     should_end_session = True
     
     card_output = "VistaGraphics publishes over 40 titles annually in the hospitality, lifestyle and specialized genres. With each publication, quality is the focus."
-    speech_output = "<speak>A little about our publishing services. " + services_list[0] + " </speak>"
+    speech_output = "<speak>A little about our publishing services <break time=\"0.25s\"/> " + services_list[0] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Publishing Services", card_output, speech_output, reprompt_text, should_end_session))
@@ -110,7 +110,7 @@ def digital_marketing(intent, session):
     should_end_session = True
     
     card_output = "With an ever growing need for dedicated Internet service solutions, Vista Internet Marketing Solutions, Inc. was born to answer that call."
-    speech_output = "<speak>A little about our digital marketing. " + services_list[1] + " </speak>"
+    speech_output = "<speak>A little about our digital marketing <break time=\"0.25s\"/> " + services_list[1] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Digital Marketing", card_output, speech_output, reprompt_text, should_end_session))
@@ -123,7 +123,7 @@ def vista_promos_div(intent, session):
     should_end_session = True
     
     card_output = "VistaGraphics has launched a new division for promotional products called VistaPromos to help market and brand your company."
-    speech_output = "<speak>A little about our Vista Promos Division. " + services_list[2] + " </speak>"
+    speech_output = "<speak>A little about our Vista Promos Division <break time=\"0.25s\"/> " + services_list[2] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Vista Promos Division", card_output, speech_output, reprompt_text, should_end_session))
@@ -136,7 +136,7 @@ def events_ticketing_services(intent, session):
     should_end_session = True
     
     card_output = "We manage and promote dozens of events each year and also offer our clients a method for selling tickets and promoting events."
-    speech_output = "<speak>A little about our Events and Ticketing Services. " + services_list[3] + " </speak>"
+    speech_output = "<speak>A little about our Events and Ticketing Services <break time=\"0.25s\"/> " + services_list[3] + " </speak>"
 
     return build_response(session_attributes, build_speechlet_response
                           ("Events & Ticketing Services", card_output, speech_output, reprompt_text, should_end_session))
